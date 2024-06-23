@@ -1,0 +1,1 @@
+docker run -d -p 2222:22 --name myjailCon myjail:latest

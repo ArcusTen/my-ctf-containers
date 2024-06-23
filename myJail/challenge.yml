@@ -1,0 +1,27 @@
+name: "JailNo_10"
+author: "ArcusTen"
+category: "PrivEsc"
+description: "Welcome to my Jail. Get flag from `/root/flag.txt` .Use `prisoner:prison_p@55_4_m3` as your credentials."
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 10
+    minimum: 50
+    image: jailno_10:latest
+    port: 22
+    command: ""
+    volumes: ""
+    ctype: ssh
+
+image: ./src
+flags:
+    - {
+        type: "static",
+        content: "flag{REDACTED}",
+        data: "case_sensitive",
+    }
+
+state: visible
+version: "0.1"

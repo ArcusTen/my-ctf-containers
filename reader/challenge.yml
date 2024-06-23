@@ -1,0 +1,27 @@
+name: "Reader"
+author: "ArcusTen"
+category: "PrivEsc"
+description: "Alright, fellas! Here's the deal: You've got clearance to be anyone except root. But let's face it, who wants to play by the rules? Your mission? Snatch flag from `/root/flag.txt`. Slide in through SSH with username `ctf-player` and password `my_v3ry_s3cur3_p@55_17`. Let's go snag that flag and make root jealous!!"
+value: 50
+type: container
+
+extra:
+    initial: 50
+    decay: 1
+    minimum: 50
+    image: reader:latest
+    port: 22
+    command: ""
+    volumes: ""
+    ctype: ssh
+
+image: ./src
+flags:
+    - {
+        type: "static",
+        content: "flag{REDACTED}",
+        data: "case_sensitive",
+    }
+
+state: 
+version: "0.1"
